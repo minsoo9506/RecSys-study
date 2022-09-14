@@ -31,11 +31,22 @@
 
 ### 비슷한 컨텐츠를 찾는 방법
 
-- cosine similarity
+- Cosine similarity
   - -1 ~ 1 사이의 값
   - 두 벡터의 유사도를 측정
 
-$$similarity = \frac{A \cdot B}{||A|| ||B||}$$
+$$cs = \frac{A \cdot B}{||A|| ||B||}$$
+
+- Jaccard similarity
+  - 집합의 개념을 이용한 유사도 계산
+  - 두 집합의 유사도는 얼마나 많은 아이템이 겹치는지로 판단
+
+$$J(A,B) = \frac{|A \cap B|}{|A \cup B|}$$
+
+- Pearson similarity
+  - 두 벡터의 상관관계를 계산
+
+$$r_{xy} = \frac{\sum (X_i - \bar{X})(Y_I - \bar{Y})}{\sqrt{\sum(X_i - \bar{X})^2} \sqrt{\sum(Y_i - \bar{Y})^2}}$$
 
 # Nearest Neighbor algorithm
 

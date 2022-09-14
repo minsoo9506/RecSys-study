@@ -15,12 +15,12 @@ clean:
 ## flake8: PEP8 based lint
 ## mypy  : type check
 lint:
-	flake8 src test
-	mypy src
+	flake8 src test fastcampus_lecture/fcRecSys
+	mypy src fastcampus_lecture/fcRecSys
 
 #  formatting
 ## black: formatting
 ## isort: import formatting
 format:
-	black src test
-	isort src test
+	black src test fastcampus_lecture/fcRecSys
+	isort src test fastcampus_lecture/fcRecSys

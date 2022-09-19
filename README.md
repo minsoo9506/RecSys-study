@@ -25,8 +25,6 @@
 </div>
 </details>
 
-<br/>
-
 # Paper Read
 
 ### Algorithm

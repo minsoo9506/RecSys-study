@@ -31,7 +31,7 @@
 
 ### Algorithm
 
-- Collaborative Filtering for Implicit Feedback Data, 2008 [`review`](./paper_review/Collaborative%20Filtering%20for%20Implicit%20Feedback%20Data.md
+- Collaborative Filtering for Implicit Feedback Data, 2008 [`review`](./paper_review/Collaborative%20Filtering%20for%20Implicit%20Feedback%20Data.md)
 - BPR: Bayesian Personalized Ranking from Implicit Feedback, UAI 2009 [`review`](./paper_review/BPR%3A%20Bayesian%20Personalized%20Ranking%20from%20Implicit%20Feedback.md)
 
 ### Diversity

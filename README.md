@@ -25,6 +25,14 @@
 </div>
 </details>
 
+# Code
+
+### Algorithm
+
+|             Model             |          Model Code          |                           Example Code                           |
+| :---------------------------: | :--------------------------: | :--------------------------------------------------------------: |
+| Matrix Factorization with SGD | [`model`](./src/model/MF.py) | [`movielens example`](./notebook/example_MF_SGD_movielens.ipynb) |
+
 # Paper Read
 
 ### Algorithm

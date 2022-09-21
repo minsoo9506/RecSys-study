@@ -14,6 +14,8 @@
   - [content-based filtering](./fastcampus_lecture/summary/contents_based_filtering.md)
   - [neighborhood-based collaborative filtering](./fastcampus_lecture/summary/neighborhood_based_collaborative_filtering.md)
   - [model-based filtering](./fastcampus_lecture/summary/model_based_filtering.md)
+  - [hybrid recommender system](./fastcampus_lecture/summary/hybrid_recommender_system.md)
+  - [contextual aware recommender system](./fastcampus_lecture/summary/contextual_aware_recommender_system.md)
   - [evaluation metric](./fastcampus_lecture/summary/evaluation_metric.md)
 - 실습 (code)
   - [movielens EDA](./fastcampus_lecture/notebook/00_movielens_eda.ipynb)
@@ -39,6 +41,7 @@
 
 - Collaborative Filtering for Implicit Feedback Data, 2008 [`review`](./paper_review/Collaborative%20Filtering%20for%20Implicit%20Feedback%20Data.md)
 - BPR: Bayesian Personalized Ranking from Implicit Feedback, UAI 2009 [`review`](./paper_review/BPR%3A%20Bayesian%20Personalized%20Ranking%20from%20Implicit%20Feedback.md)
+- Context-Aware Recommender Systems, 2011
 
 ### Diversity
 

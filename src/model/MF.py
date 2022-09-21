@@ -6,7 +6,7 @@ import numpy as np
 class MF:
     def __init__(
         self, matrix: np.ndarray, latent_dim: int, alpha: float, beta: float, iters: int
-    ):
+    ) -> None:
         """matrix factorization with SGD
 
         Parameters
@@ -29,7 +29,7 @@ class MF:
         self.beta = beta
         self.iters = iters
 
-    def train(self):
+    def train(self) -> None:
         """train MF"""
 
         # initialize user and item latent feature matrix
@@ -57,10 +57,10 @@ class MF:
         for i in range(self.iters):
             np.random.shuffle(self.samples)
             self._optim_sgd()
-            mse = self._get_rmse()
-            print(f"Iteration: {i + 1}; train_mse = {mse:.5f}")
+            rmse = self._get_rmse()
+            print(f"Iteration: {i + 1}; train_rmse = {rmse:.5f}")
 
-    def _get_rmse(self):
+    def _get_rmse(self) -> float:
         """get rmse
 
         Returns
@@ -74,7 +74,7 @@ class MF:
         rmse = np.sqrt(mse)
         return rmse
 
-    def _get_current_matrix(self):
+    def _get_current_matrix(self) -> np.ndarray:
         """get current updating(predict) matrix
 
         Returns
@@ -91,11 +91,56 @@ class MF:
             + self.U.dot(self.I.T)
         )
 
-    def _optim_sgd(self):
-        pass
+    def _optim_sgd(self) -> None:
+        """perform sgd"""
+        for i, j, r in self.samples:
+            prediction = self._get_rating(i, j)
+            e = r - prediction
 
-    def get_rating(self, i, j):
-        pass
+            # Update biases
+            self.b_u[i] += self.alpha * (e - self.beta * self.b_u[i])
+            self.b_i[j] += self.alpha * (e - self.beta * self.b_i[j])
 
-    def show_full_matrix(self):
-        pass
+            # Create copy of row of U since we need to update it but use older values for update on I
+            U_i = self.U[i, :][:]
+
+            # Update user and item latent feature matrices
+            self.U[i, :] += self.alpha * (e * self.I[j, :] - self.beta * self.U[i, :])
+            self.I[j, :] += self.alpha * (e * U_i - self.beta * self.I[j, :])
+
+    def _get_rating(self, i: int, j: int) -> float:
+        """get the predicted rating of user i and item j
+
+        Parameters
+        ----------
+        i : int
+            user index
+        j : int
+            item index
+
+        Returns
+        -------
+        float
+            predicted rating
+        """
+        prediction = (
+            self.b + self.b_u[i] + self.b_i[j] + self.U[i, :].dot(self.I[j, :].T)
+        )
+        return prediction
+
+    def show_full_matrix(self) -> np.ndarray:
+        """show full matrix
+
+        Returns
+        -------
+        np.ndarray
+            result(predicted) matrix
+        """
+        return (
+            self.b
+            + self.b_u[:, np.newaxis]
+            + self.b_i[
+                np.newaxis :,
+            ]
+            + self.U.dot(self.I.T)
+        )

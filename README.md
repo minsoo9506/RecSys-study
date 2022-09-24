@@ -9,7 +9,9 @@
 <div markdown="1">
 
 - data
-  - [movielens(small)](https://grouplens.org/datasets/movielens/)
+  - MovieLens(small)
+  - KMRD(small)
+  - Netflix
 - 이론 (summary)
   - [content-based filtering](./fastcampus_lecture/summary/contents_based_filtering.md)
   - [neighborhood-based collaborative filtering](./fastcampus_lecture/summary/neighborhood_based_collaborative_filtering.md)
@@ -23,17 +25,21 @@
   - [movielens content-based filtering: TFIDF](./fastcampus_lecture/notebook/02_movielens_contents_based_filtering_TFIDF.ipynb)
   - [movielens neighborhood-based collaborative filtering](./fastcampus_lecture/notebook/03_movielens_neighborhood_based_collaborative_filtering.ipynb)
   - [movielens matrix factorization: svd](./fastcampus_lecture/notebook/04_movielens_matrix_factorization_svd.ipynb)
+  - [KMRD, Netflix EDA](./fastcampus_lecture/notebook/05_KMRD_netflix_eda.ipynb)
 
 </div>
 </details>
 
 # Code
 
+- pytorch, pytorch_lightning
+
 ### Algorithm
 
-|             Model             |          Model Code          |                           Example Code                           |
-| :---------------------------: | :--------------------------: | :--------------------------------------------------------------: |
-| Matrix Factorization with SGD | [`model`](./src/model/MF.py) | [`movielens example`](./notebook/example_MF_SGD_movielens.ipynb) |
+|             Model              |                     Model Code                      |                           Example Code                           |
+| :----------------------------: | :-------------------------------------------------: | :--------------------------------------------------------------: |
+| Matrix Factorization with SGD  |            [`model`](./src/model/MF.py)             | [`movielens example`](./notebook/example_MF_SGD_movielens.ipynb) |
+| Neural Collaborative Filtering | [`model`](./src/model/NCF.py), `lit_model`, `train` |                           KMRD example                           |
 
 # Paper Read
 
@@ -42,6 +48,7 @@
 - Collaborative Filtering for Implicit Feedback Data, 2008 [`review`](./paper_review/Collaborative%20Filtering%20for%20Implicit%20Feedback%20Data.md)
 - BPR: Bayesian Personalized Ranking from Implicit Feedback, UAI 2009 [`review`](./paper_review/BPR%3A%20Bayesian%20Personalized%20Ranking%20from%20Implicit%20Feedback.md)
 - Context-Aware Recommender Systems, 2011
+- Neural Collborative Filtering, 2017 IWWWC [`review`](./paper_review/Neural%20Collaborative%20Filtering.md)
 
 ### Diversity
 

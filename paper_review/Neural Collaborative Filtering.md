@@ -24,7 +24,7 @@ $$\hat{y}_{ui} = f(u,i|p_u, q_i) = p_u^Tq_i = \sum_{k=1}^K p_{uk}q_{ik}$$
 
 - GMF + MLP
 - Point-wise 방법, binary classificaion 이라고 할 수 있다.
-- 논문에서 Figure3
+- [논문](https://arxiv.org/pdf/1708.05031.pdf)에서 Figure3
 
 $$\psi^{GMF} = p_u^G \odot q_i^G$$
 

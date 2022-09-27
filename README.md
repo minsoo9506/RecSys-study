@@ -36,10 +36,10 @@
 
 ### Algorithm
 
-|             Model              |                     Model Code                      |                           Example Code                           |
-| :----------------------------: | :-------------------------------------------------: | :--------------------------------------------------------------: |
-| Matrix Factorization with SGD  |            [`model`](./src/model/MF.py)             | [`movielens example`](./notebook/example_MF_SGD_movielens.ipynb) |
-| Neural Collaborative Filtering | [`model`](./src/model/NCF.py), `lit_model`, `train` |                           KMRD example                           |
+|             Model              |                                       Model Code                                        |                           Example Code                           |
+| :----------------------------: | :-------------------------------------------------------------------------------------: | :--------------------------------------------------------------: |
+| Matrix Factorization with SGD  |                              [`model`](./src/model/MF.py)                               | [`movielens example`](./notebook/example_MF_SGD_movielens.ipynb) |
+| Neural Collaborative Filtering | [`model`](./src/model/NCF.py), [`lit_model`](./src/lit_model/NCF_lit_model.py), `train` |                           KMRD example                           |
 
 # Paper Read
 
@@ -49,6 +49,7 @@
 - BPR: Bayesian Personalized Ranking from Implicit Feedback, UAI 2009 [`review`](./paper_review/BPR%3A%20Bayesian%20Personalized%20Ranking%20from%20Implicit%20Feedback.md)
 - Context-Aware Recommender Systems, 2011
 - Neural Collborative Filtering, 2017 IWWWC [`review`](./paper_review/Neural%20Collaborative%20Filtering.md)
+- Fatorization Machines, 2009 [`review`](./paper_review/Factorization%20Machines.md)
 
 ### Diversity
 

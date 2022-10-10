@@ -5,7 +5,7 @@
 # Study Materials
 
 <details>
-<summary>패스트캠퍼스 딥러닝을 활용한 추천시스템 구현 올인원 패키지 Online `ing`</summary>
+<summary>패스트캠퍼스 딥러닝을 활용한 추천시스템 구현 올인원 패키지 Online</summary>
 <div markdown="1">
 
 - data
@@ -52,6 +52,9 @@
 - Fatorization Machines, 2009 [`review`](./paper_review/Factorization%20Machines.md)
 - Wide & Deep Learning for Recommender Systems, 2016 [`review`](./paper_review/Wide%20%26%20Deep%20Learning%20for%20Recommender%20Systems.md)
 - DeepFM: A Factorization-Machine based Neural Network for CTR Prediction, 2017 [`review`](./paper_review/DeepFM%3A%20A%20Factorization-Machine%20based%20Neural%20Network%20for%20CTR%20Prediction.md)
+- AutoRec: Autoencoders Meet Collaborative Filtering, 2015 WWW
+- Training Deep AutoEncoders for Collaborative Filtering, 2017 [`review`](./paper_review/Training%20Deep%20AutoEncoders%20for%20Collaborative%20Filtering.md)
+- Variational Autoencoders for Collaborative Filtering, 2018
 
 ### Diversity
 

@@ -55,10 +55,22 @@
 - AutoRec: Autoencoders Meet Collaborative Filtering, 2015 WWW
 - Training Deep AutoEncoders for Collaborative Filtering, 2017 [`review`](./paper_review/Training%20Deep%20AutoEncoders%20for%20Collaborative%20Filtering.md)
 - Variational Autoencoders for Collaborative Filtering, 2018
+- Joint Training of Ratings and Reviews with Recurrent Recommender Nerworks, 2017 ICLR [`review`](./paper_review/Joint%20Training%20of%20Ratings%20and%20Reviews%20with%20Recurrent%20Recommender%20Nerworks.md)
+- Image-based Recommendations on Styles and Substitutes, 2015 SIGIR
+- VBPR: Visual Bayesian Personalized Ranking from Implicit Feedback, 2016 AAAI
+- Deep content-based music recommendation, 2013 NIPS
+- Session-based Recommendations with Recurrent Neural Networks, 2016 ICLR
+- BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations from Transformer, 2019
+- Deep Neural Networks for YouTube Recommendations, 2016 RecSys
+- Recommending What Video to Watch Next: A Multitask Ranking System, 2019 RecSys
 
 ### Diversity
 
 - Algorithmic Effects on the Diversity of Consumption on Spotify, WWW 2020
+
+### Survey
+
+- Deep Learning based Recommender System: A Survey and New Perspectives, 2019
 
 # Other Sources
 
@@ -82,3 +94,5 @@
 - (Deview2020) 유저가 좋은 작품(웹툰)을 만났을 때
 - (Deview2020) 추천시스템 3.0: 딥러닝 후기시대에서 바이어스, 그래프, 그리고 인과관계의 중요성
 - NDC21-데이터분석, 추천알고리즘 offline A/B 테스트 (feat: PAIGE 프로야구 서비스)
+
+### Article

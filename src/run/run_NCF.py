@@ -1,30 +1,42 @@
 import argparse
-
+from typing import List
 import numpy as np
 import pandas as pd
 import pytorch_lightning as pl
 import torch
 from torch.utils.data import DataLoader
-
-from src.dataload.tabularDataset import split_tabular_normal_only_train, tabularDataset
-from src.lit_models.LitBaseAutoEncoder import LitBaseAutoEncoder
-from src.lit_models.LitBaseVAE import LitBaseVAE
+from src.dataload.load_data import NCFDataset, NCFMakeData
+from src.lit_model.NCF_lit_model import NCFLitModel
+from src.model import NeuralMatrixFactorization
 
 
 def define_argparser():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--project", default="Tabular Anomaly Detection")
-    parser.add_argument("--model", default="LitBaseAutoEncoder")
+    parser.add_argument("--project", default="NCF")
     parser.add_argument(
-        "--data_path",
-        default="/Users/nhn/Workspace/catchMinor/data/tabular_data/abalone9-18.csv",
+        "--batch_size",
+        type=int,
+        default=16,
+        help="input batch size for training (default: 16)",
     )
     parser.add_argument(
-        "--batch-size",
+        "--gmf_emb_dim",
         type=int,
-        default=512,
-        help="input batch size for training (default: 512)",
+        default=16,
+        help="input GMF embedding dimension for training (default: 16)",
+    )
+    parser.add_argument(
+        "--mlp_emb_dim",
+        type=int,
+        default=16,
+        help="input MLP embedding dimension for training (default: 16)",
+    )
+    parser.add_argument(
+        "--mlp_hidden_dims_list",
+        type=List[int],
+        default=[32, 16],
+        help="MLP hidden layer dimension list (default: [32, 6])",
     )
     parser.add_argument(
         "--epochs", type=int, default=10, help="number of epochs to train (default: 10)"
@@ -39,18 +51,14 @@ def define_argparser():
 
 def main(config):
     # data
-    df = pd.read_csv(config.data_path)
-    normal_train, normal_val, normal_abnormal_test = split_tabular_normal_only_train(df)
-    train_dataset = tabularDataset(
-        np.array(normal_train.iloc[:, :-1]), np.array(normal_train.iloc[:, -1])
-    )
-    valid_dataset = tabularDataset(
-        np.array(normal_val.iloc[:, :-1]), np.array(normal_val.iloc[:, -1])
-    )
-    test_dataset = tabularDataset(
-        np.array(normal_abnormal_test.iloc[:, :-1]),
-        np.array(normal_abnormal_test.iloc[:, -1]),
-    )
+    data_path = "./data/kmrd/kmr_dataset/datafile/kmrd-small"
+    data_class = NCFMakeData(data_path)
+    X_train, y_train = data_class.generate_train_df()
+    X_valid, y_valid = data_class.generate_valid_df()
+
+    train_dataset = NCFDataset(X_train, y_train)
+    valid_dataset = NCFDataset(X_valid, y_valid)
+
     train_loader = DataLoader(train_dataset, batch_size=config.batch_size)
     valid_loader = DataLoader(valid_dataset, batch_size=config.batch_size)
     test_loader = DataLoader(test_dataset, batch_size=config.batch_size)

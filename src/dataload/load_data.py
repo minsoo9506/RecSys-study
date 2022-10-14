@@ -4,6 +4,9 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
+import torch
+from torch.utils.data import dataset
+
 
 def read_ratings_data(
     data_path: str, test_size: float
@@ -89,6 +92,48 @@ class NCFMakeData:
                 "movie": self.valid_df["movie"].map(self.movie_to_idx),
             }
         )
-        X_valid = self.valid_df["rate"].astype(np.float32)
+        y_valid = self.valid_df["rate"].astype(np.float32)
 
-        return X_valid, X_valid
+        return X_valid, y_valid
+
+
+class NCFDataset(dataset):
+    def __init__(self, X: pd.DataFrame, y: np.ndarray):
+        """_summary_
+
+        Parameters
+        ----------
+        X : pd.DataFrame
+            _description_
+        y : np.ndarray
+            _description_
+        """
+        X, y = np.array(X), np.array(y)
+        # torch.Tensor()는 새 메모리를 할당하지만 torch.from_numpy()는 그대로 사용한다고 함
+        self.X = torch.from_numpy(X)
+        self.y = torch.from_numpy(y)
+
+    def __len__(self) -> int:
+        """return len of data
+
+        Returns
+        -------
+        int
+            len of data
+        """
+        return len(self.X)
+
+    def __getitem__(self, idx: int) -> Tuple[torch.Tensor, torch.Tensor]:
+        """return X, y
+
+        Parameters
+        ----------
+        idx : int
+            data index
+
+        Returns
+        -------
+        Tuple[torch.Tensor, torch.Tensor]
+            X, y
+        """
+        return self.X[idx, :], self.y[idx]

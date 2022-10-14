@@ -61,13 +61,16 @@ def main(config):
 
     train_loader = DataLoader(train_dataset, batch_size=config.batch_size)
     valid_loader = DataLoader(valid_dataset, batch_size=config.batch_size)
-    test_loader = DataLoader(test_dataset, batch_size=config.batch_size)
 
+    ###################### 여기까지 진행 #####################
     # model
-    if config.model == "LitBaseAutoEncoder":
-        model = LitBaseAutoEncoder(n_layers=2, features_list=[8, 4, 2])
-    if config.model == "LitBaseVAE":
-        model = LitBaseVAE()
+    ncf_model = NeuralMatrixFactorization(
+        data_class.num_unique_users,
+        data_class.num_unique_movies,
+        config.gmf_emb_dim,
+        config.mlp_emb_dim,
+        config.mlp_hidden_dims_list,
+    )
 
     # trainer
     logger = pl.loggers.WandbLogger()

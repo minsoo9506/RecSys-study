@@ -2,10 +2,9 @@ from typing import Tuple
 
 import numpy as np
 import pandas as pd
-from sklearn.model_selection import train_test_split
-
 import torch
-from torch.utils.data import dataset
+from sklearn.model_selection import train_test_split
+from torch.utils.data import Dataset
 
 
 def read_ratings_data(
@@ -74,7 +73,11 @@ class NCFMakeData:
                 "movie": self.train_df["movie"].map(self.movie_to_idx),
             }
         )
-        y_train = self.train_df["rate"].astype(np.float32)
+
+        # max값으로 나눠서 normalize
+        y_train = self.train_df["rate"].astype(np.float32) / np.max(
+            self.train_df["rate"]
+        )
 
         return X_train, y_train
 
@@ -92,21 +95,25 @@ class NCFMakeData:
                 "movie": self.valid_df["movie"].map(self.movie_to_idx),
             }
         )
-        y_valid = self.valid_df["rate"].astype(np.float32)
+
+        # valid도 train에 했던 max값으로 진행
+        y_valid = self.valid_df["rate"].astype(np.float32) / np.max(
+            self.train_df["rate"]
+        )
 
         return X_valid, y_valid
 
 
-class NCFDataset(dataset):
+class NCFDataset(Dataset):
     def __init__(self, X: pd.DataFrame, y: np.ndarray):
         """_summary_
 
         Parameters
         ----------
         X : pd.DataFrame
-            _description_
+            rating data
         y : np.ndarray
-            _description_
+            label
         """
         X, y = np.array(X), np.array(y)
         # torch.Tensor()는 새 메모리를 할당하지만 torch.from_numpy()는 그대로 사용한다고 함

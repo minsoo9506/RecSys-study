@@ -45,21 +45,21 @@ class NeuralMatrixFactorization(nn.Module):
 
         self.NeuMF_layer = nn.Linear(gmf_emb_dim + mlp_hidden_dims_list[-1], 1)
 
-    def forward(self, users: torch.Tensor, items: torch.Tensor) -> torch.Tensor:
+    def forward(self, X: torch.Tensor) -> torch.Tensor:
         """_summary_
 
         Parameters
         ----------
-        users : torch.Tensor
-            index of user
-        items : torch.Tensor
-            index of item
+        X : torch.Tensor
+            user, item input data
 
         Returns
         -------
         torch.Tensor
-            predicted ratings (0 ~ 1)
+            predicted rate (0 ~ 1)
         """
+        users, items = X[:, 0], X[:, 1]
+
         element_wise_prod = torch.mul(
             self.gmf_user_emb(users), self.gmf_item_emb(items)
         )

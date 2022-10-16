@@ -64,10 +64,8 @@ class NeuralMatrixFactorization(nn.Module):
             self.gmf_user_emb(users), self.gmf_item_emb(items)
         )
         mlp_concat = torch.cat(
-            self.mlp_user_emb(users), self.mlp_item_emb(items), dim=1
+            (self.mlp_user_emb(users), self.mlp_item_emb(items)), dim=1
         )
         mlp_out = self.mlp(mlp_concat)
-        final_layer_input = torch.cat(element_wise_prod, mlp_out, dim=1)
-        out = self.NeuMF_layer(final_layer_input)
-        out = nn.Sigmoid(out)
+        final_layer_input = torch.cat((element_wise_prod, mlp_out), dim=1)
         return out

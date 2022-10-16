@@ -1,12 +1,11 @@
 import argparse
-from typing import Any, Dict, Tuple, Union
+from typing import Any, Dict, Tuple
 
 import pytorch_lightning as pl
 import torch
-from torchmetrics import Accuracy
 
 OPTIMIZER = "Adam"
-LOSS = "binary_cross_entropy"  # model의 최종 out이 sigmoid를 거침
+LOSS = "MSELoss"
 LR = 0.001
 
 
@@ -31,11 +30,7 @@ class NCFLitModel(pl.LightningModule):
         self.lr = self.args.get("lr", LR)
 
         loss = self.args.get("loss", LOSS)
-        self.loss_fn = getattr(torch.nn.functional, loss)
-
-        self.train_acc = Accuracy()
-        self.val_acc = Accuracy()
-        self.test_acc = Accuracy()
+        self.loss_fn = getattr(torch.nn, loss)()
 
     # @staticmethod
     # def add_to_argparse(parser):
@@ -81,31 +76,27 @@ class NCFLitModel(pl.LightningModule):
         return self.model(x)
 
     def predict(self, x: torch.Tensor) -> torch.Tensor:
-        logits = self.model(x)
-        return logits
+        preds = self.model(x)
+        return preds
 
-    def _run_on_batch(
-        self, batch: Tuple[torch.Tensor, torch.Tensor], with_preds: bool = False
-    ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
-        """batch train
+    def _run_on_batch(self, batch: Tuple[torch.Tensor, torch.Tensor]) -> torch.Tensor:
+        """_summary_
 
         Parameters
         ----------
         batch : Tuple[torch.Tensor, torch.Tensor]
-            batch data
-        with_preds : bool, optional
-            _description_, by default False
+            _description_
 
         Returns
         -------
-        Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]
-            x, y, logits, loss
+        torch.Tensor
+            _description_
         """
         x, y = batch
-        logits = self(x)
-        loss = self.loss_fn(logits, y)
+        preds = self(x)
+        loss = self.loss_fn(preds, y)
 
-        return x, y, logits, loss
+        return loss
 
     def training_step(
         self, batch: Tuple[torch.Tensor, torch.Tensor], batch_idx: int
@@ -124,11 +115,11 @@ class NCFLitModel(pl.LightningModule):
         Dict[str, torch.Tensor]
             {"loss": loss}
         """
-        x, y, logits, loss = self._run_on_batch(batch)
-        self.train_acc(logits, y)
+        loss = self._run_on_batch(batch)
 
         self.log("train/loss", loss)
-        self.log("train/acc", self.train_acc, on_step=False, on_epoch=True)
+        # BCELoss 사용시 아래처럼 ACC 볼 수 있게
+        # self.log("train/acc", self.train_acc, on_step=False, on_epoch=True)
 
         return {"loss": loss}
 
@@ -149,13 +140,9 @@ class NCFLitModel(pl.LightningModule):
         Dict[str, torch.Tensor]
             {"loss": loss}
         """
-        x, y, logits, loss = self._run_on_batch(batch)
-        self.val_acc(logits, y)
+        loss = self._run_on_batch(batch)
 
         self.log("validation/loss", loss, prog_bar=True, sync_dist=True)
-        self.log(
-            "validation/acc", self.val_acc, on_step=False, on_epoch=True, prog_bar=True
-        )
 
         return {"loss": loss}
 
@@ -169,8 +156,6 @@ class NCFLitModel(pl.LightningModule):
         batch_idx : int
             batch index
         """
-        x, y, logits, loss = self._run_on_batch(batch)
-        self.test_acc(logits, y)
+        loss = self._run_on_batch(batch)
 
         self.log("test/loss", loss, on_step=False, on_epoch=True)
-        self.log("test/acc", self.test_acc, on_step=False, on_epoch=True)

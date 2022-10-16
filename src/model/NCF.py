@@ -44,6 +44,7 @@ class NeuralMatrixFactorization(nn.Module):
         self.mlp = nn.Sequential(*mlp)
 
         self.NeuMF_layer = nn.Linear(gmf_emb_dim + mlp_hidden_dims_list[-1], 1)
+        self.sigmoid = nn.Sigmoid()
 
     def forward(self, X: torch.Tensor) -> torch.Tensor:
         """_summary_
@@ -68,4 +69,5 @@ class NeuralMatrixFactorization(nn.Module):
         )
         mlp_out = self.mlp(mlp_concat)
         final_layer_input = torch.cat((element_wise_prod, mlp_out), dim=1)
+        out = self.NeuMF_layer(final_layer_input).reshape(-1)
         return out

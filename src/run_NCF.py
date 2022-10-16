@@ -1,13 +1,12 @@
 import argparse
-from typing import List
-import numpy as np
-import pandas as pd
+
 import pytorch_lightning as pl
 import torch
 from torch.utils.data import DataLoader
-from src.dataload.load_data import NCFDataset, NCFMakeData
-from src.lit_model.NCF_lit_model import NCFLitModel
-from src.model import NeuralMatrixFactorization
+
+from dataload.load_data import NCFDataset, NCFMakeData
+from lit_model.NCF_lit_model import NCFLitModel
+from model.NCF import NeuralMatrixFactorization
 
 
 def define_argparser():
@@ -17,8 +16,8 @@ def define_argparser():
     parser.add_argument(
         "--batch_size",
         type=int,
-        default=16,
-        help="input batch size for training (default: 16)",
+        default=128,
+        help="input batch size for training (default: 128)",
     )
     parser.add_argument(
         "--gmf_emb_dim",
@@ -34,16 +33,15 @@ def define_argparser():
     )
     parser.add_argument(
         "--mlp_hidden_dims_list",
-        type=List[int],
         default=[32, 16],
         help="MLP hidden layer dimension list (default: [32, 6])",
     )
     parser.add_argument(
-        "--epochs", type=int, default=10, help="number of epochs to train (default: 10)"
+        "--epochs", type=int, default=3, help="number of epochs to train (default: 3)"
     )
     parser.add_argument("--cuda", type=int, default=0, help="0 for cpu -1 for all gpu")
     config = parser.parse_args()
-    if config.cuda == 0 or torch.cuda.is_available() == False:
+    if config.cuda == 0 or torch.cuda.is_available() is False:
         config.cuda = 0
 
     return config
@@ -51,7 +49,7 @@ def define_argparser():
 
 def main(config):
     # data
-    data_path = "./data/kmrd/kmr_dataset/datafile/kmrd-small"
+    data_path = "/home/minsoo/Workspace/RecSys-study/data/kmrd/kmr_dataset/datafile/kmrd-small/rates.csv"  # kmrd-small data
     data_class = NCFMakeData(data_path)
     X_train, y_train = data_class.generate_train_df()
     X_valid, y_valid = data_class.generate_valid_df()
@@ -62,7 +60,6 @@ def main(config):
     train_loader = DataLoader(train_dataset, batch_size=config.batch_size)
     valid_loader = DataLoader(valid_dataset, batch_size=config.batch_size)
 
-    ###################### 여기까지 진행 #####################
     # model
     ncf_model = NeuralMatrixFactorization(
         data_class.num_unique_users,
@@ -72,13 +69,15 @@ def main(config):
         config.mlp_hidden_dims_list,
     )
 
+    ncf_lit_model = NCFLitModel(ncf_model, config)
+
     # trainer
-    logger = pl.loggers.WandbLogger()
+    # logger = pl.loggers.WandbLogger()
     early_stopping_callback = pl.callbacks.EarlyStopping(
-        monitor="val_loss", mode="min", patience=20
+        monitor="validation/loss", mode="min", patience=20
     )
     trainer = pl.Trainer(
-        logger=logger,
+        # logger=logger,
         log_every_n_steps=10,  # set the logging frequency
         gpus=config.cuda,  # use all GPUs
         max_epochs=config.epochs,  # number of epochs
@@ -87,7 +86,7 @@ def main(config):
     )
 
     # fit the model
-    trainer.fit(model, train_loader, valid_loader)
+    trainer.fit(ncf_lit_model, train_loader, valid_loader)
 
     # error
     ############

@@ -36,10 +36,11 @@
 
 ### Algorithm
 
-|             Model              |                                       Model Code                                        |                           Example Code                           |
-| :----------------------------: | :-------------------------------------------------------------------------------------: | :--------------------------------------------------------------: |
-| Matrix Factorization with SGD  |                              [`model`](./src/model/MF.py)                               | [`movielens example`](./notebook/example_MF_SGD_movielens.ipynb) |
-| Neural Collaborative Filtering | [`model`](./src/model/NCF.py), [`lit_model`](./src/lit_model/NCF_lit_model.py), `train` |                           KMRD example                           |
+|             Model              |                                                Model Code                                                 |                           Example Code                           |
+| :----------------------------: | :-------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------: |
+| Matrix Factorization with SGD  |                                       [`model`](./src/model/MF.py)                                        | [`movielens example`](./notebook/example_MF_SGD_movielens.ipynb) |
+| Neural Collaborative Filtering | [`model`](./src/model/NCF.py), [`lit_model`](./src/lit_model/NCF_lit_model.py), [`run`](./src/run_NCF.py) |                  KMRD-small ratings.csv example                  |
+|     Factorization Machine      |                                        `model`, `lit_model`, `run`                                        |                                                                  |
 
 # Paper Read
 

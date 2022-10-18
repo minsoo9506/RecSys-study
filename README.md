@@ -40,7 +40,7 @@
 | :----------------------------: | :-------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------: |
 | Matrix Factorization with SGD  |                                       [`model`](./src/model/MF.py)                                        | [`movielens example`](./notebook/example_MF_SGD_movielens.ipynb) |
 | Neural Collaborative Filtering | [`model`](./src/model/NCF.py), [`lit_model`](./src/lit_model/NCF_lit_model.py), [`run`](./src/run_NCF.py) |                  KMRD-small ratings.csv example                  |
-|     Factorization Machine      |                             [`model`](./src/model/FM.py), `lit_model`, `run`                              |                                                                  |
+|     Factorization Machine      |                                       [`model`](./src/model/FM.py)                                        |                  KMRD-small ratings.csv example                  |
 
 # Paper Read
 

@@ -36,11 +36,11 @@
 
 ### Algorithm
 
-|             Model              |                                                Model Code                                                 |                           Example Code                           |
-| :----------------------------: | :-------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------: |
-| Matrix Factorization with SGD  |                                       [`model`](./src/model/MF.py)                                        | [`movielens example`](./notebook/example_MF_SGD_movielens.ipynb) |
-| Neural Collaborative Filtering | [`model`](./src/model/NCF.py), [`lit_model`](./src/lit_model/NCF_lit_model.py), [`run`](./src/run_NCF.py) |                  KMRD-small ratings.csv example                  |
-|     Factorization Machine      |                                       [`model`](./src/model/FM.py)                                        |                  KMRD-small ratings.csv example                  |
+|             Model              |                                   Model Code                                   |                               Example Code                               |
+| :----------------------------: | :----------------------------------------------------------------------------: | :----------------------------------------------------------------------: |
+| Matrix Factorization with SGD  |                          [`model`](./src/model/MF.py)                          |     [`movielens example`](./notebook/example_MF_SGD_movielens.ipynb)     |
+| Neural Collaborative Filtering | [`model`](./src/model/NCF.py), [`lit_model`](./src/lit_model/NCF_lit_model.py) |            [KMRD-small ratings.csv example](./src/run_NCF.py)            |
+|     Factorization Machine      |                          [`model`](./src/model/FM.py)                          | [KMRD-small ratings.csv example](./notebook/example_FM_KMRD_small.ipynb) |
 
 # Paper Read
 

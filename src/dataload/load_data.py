@@ -121,26 +121,48 @@ class NCFDataset(Dataset):
         self.y = torch.from_numpy(y)
 
     def __len__(self) -> int:
-        """return len of data
-
-        Returns
-        -------
-        int
-            len of data
-        """
         return len(self.X)
 
     def __getitem__(self, idx: int) -> Tuple[torch.Tensor, torch.Tensor]:
-        """return X, y
+        return self.X[idx, :], self.y[idx]
+
+
+class FMDataset(Dataset):
+    def __init__(self, data: pd.DataFrame, n_samples: int):
+        """dataset for FM models
 
         Parameters
         ----------
-        idx : int
-            data index
-
-        Returns
-        -------
-        Tuple[torch.Tensor, torch.Tensor]
-            X, y
+        data : pd.DataFrame
+            _description_
+        n_samples : int
+            _description_
         """
-        return self.X[idx, :], self.y[idx]
+        super().__init__()
+        data = data[:n_samples]
+
+        user_to_index = {
+            original: idx for idx, original in enumerate(data.user.unique())
+        }
+        movie_to_index = {
+            original: idx for idx, original in enumerate(data.movie.unique())
+        }
+        data["user"] = data["user"].apply(lambda x: user_to_index[x])
+        data["movie"] = data["movie"].apply(lambda x: movie_to_index[x])
+        # [user, movie, rate] -> (user, movie, rate)
+        data = data.to_numpy()[:, :3]
+
+        self.items = data[:, :2].astype(np.int)
+        self.targets = self.__preprocess_target(data[:, 2]).astype(np.float32)
+        self.field_dims = np.max(self.items, axis=0) + 1
+
+    def __len__(self):
+        return self.targets.shape[0]
+
+    def __getitem__(self, idx):
+        return self.items[idx], self.targets[idx]
+
+    def __preprocess_target(self, target):
+        target[target <= 9] = 0
+        target[target > 9] = 1
+        return target

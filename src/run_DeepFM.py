@@ -47,7 +47,6 @@ def main(config):
     data_path = "/home/minsoo/Workspace/RecSys-study/data/kmrd/kmr_dataset/datafile/kmrd-small/rates.csv"  # kmrd-small data
     data = pd.read_csv(data_path, 0.2)
 
-    n_samples = 2000
     train_ratio = 0.8
 
     DeepFM_dataset = DeepFMDataset(data)

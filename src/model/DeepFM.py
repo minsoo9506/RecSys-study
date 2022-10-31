@@ -56,7 +56,7 @@ class FeatureEmbedding(nn.Module):
         field_dims : List[int]
             dimension of each field
         embed_dim : int
-            _description_
+            embedding dimensions
         """
         super().__init__()
         self.embedding = nn.Embedding(sum(field_dims), embed_dim)
@@ -154,9 +154,9 @@ class DeepFM(nn.Module):
         Parameters
         ----------
         field_dims : List[int]
-            _description_
+            dimension of each field
         embed_dim : int
-            _description_
+            embedding dimensions
         mlp_dims : List[int]
             _description_
         dropout : float

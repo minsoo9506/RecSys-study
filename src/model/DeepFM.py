@@ -1,8 +1,8 @@
 from typing import List
+
 import numpy as np
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 
 # reference: torchFM
 # 여기서 구현한 모델은 0,1로만으로 field가 이루어져있는 경우로 가정하고 진행
@@ -24,7 +24,7 @@ class FMLinear(nn.Module):
         self.fc = nn.Embedding(sum(field_dims), output_dim)
         self.bias = nn.parameter(torch.zeros((output_dim,)))
         self.offsets = np.array(
-            (0, *np.cumsum(field_dims)[:-1]), dtype=np.long
+            (0, *np.cumsum(field_dims)[:-1]), dtype=np.int_
         )  # 새로운 종류의 field가 시작하는 index
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
@@ -60,7 +60,7 @@ class FeatureEmbedding(nn.Module):
         """
         super().__init__()
         self.embedding = nn.Embedding(sum(field_dims), embed_dim)
-        self.offsets = np.array((0, *np.cumsum(field_dims)[:-1]), dtype=np.long)
+        self.offsets = np.array((0, *np.cumsum(field_dims)[:-1]), dtype=np.int_)
         nn.init.xavier_uniform_(self.embedding.weight.data)
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:

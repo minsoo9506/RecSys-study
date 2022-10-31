@@ -150,7 +150,7 @@ class DeepFMDataset(Dataset):
         # [user, movie, rate] -> (user, movie, rate)
         data = data.to_numpy()[:, :3]
 
-        self.items = data[:, :2].astype(np.int)
+        self.items = data[:, :2].astype(np.intc)
         self.targets = self.__preprocess_target(data[:, 2]).astype(np.float32)
         self.field_dims = np.max(self.items, axis=0) + 1
 

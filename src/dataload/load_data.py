@@ -127,19 +127,17 @@ class NCFDataset(Dataset):
         return self.X[idx, :], self.y[idx]
 
 
-class FMDataset(Dataset):
-    def __init__(self, data: pd.DataFrame, n_samples: int):
-        """dataset for FM models
+# NCFMakeData, NCFDataset 이 하는 역할을 합친 것으로 이해할 수 있다
+class DeepFMDataset(Dataset):
+    def __init__(self, data: pd.DataFrame):
+        """dataset for DeepFM model
 
         Parameters
         ----------
         data : pd.DataFrame
             _description_
-        n_samples : int
-            _description_
         """
         super().__init__()
-        data = data[:n_samples]
 
         user_to_index = {
             original: idx for idx, original in enumerate(data.user.unique())

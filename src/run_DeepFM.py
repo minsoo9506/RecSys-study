@@ -9,6 +9,8 @@ from dataload.load_data import DeepFMDataset
 from lit_model.DeepFM_lit_model import DeepFMLitModel
 from model.DeepFM import DeepFM
 
+N_SAMPLES = 2000
+
 
 def define_argparser():
     parser = argparse.ArgumentParser()
@@ -47,10 +49,11 @@ def main(config):
     data_path = "/home/minsoo/Workspace/RecSys-study/data/kmrd/kmr_dataset/datafile/kmrd-small/rates.csv"  # kmrd-small data
     data = pd.read_csv(data_path, 0.2)
 
-    train_ratio = 0.8
+    data = data[:N_SAMPLES]
 
+    train_ratio = 0.8
     DeepFM_dataset = DeepFMDataset(data)
-    train_dataset, valid_dataset, test_dataset = random_split(
+    train_dataset, valid_dataset = random_split(
         DeepFM_dataset, [train_ratio, 1.0 - train_ratio]
     )
 

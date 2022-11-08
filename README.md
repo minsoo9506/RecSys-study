@@ -43,6 +43,10 @@
 |     Factorization Machine      |                             [`model`](./src/model/FM.py)                             |  [`KMRD-small example`](./notebook/example_FM_KMRD_small.ipynb)  |
 |             DeepFM             | [`model`](./src/model/DeepFM.py), [`lit_model`](./src/lit_model/DeepFM_lit_model.py) |           [`KMRD-small example`](./src/run_DeepFM.py)            |
 
+# Appiled Project
+
+- [LG Uplus 추천 대회 참여 repo](https://github.com/minsoo9506/lg-uplus-RecSys-competition)
+
 # Paper Read
 
 ### Algorithm
@@ -50,7 +54,7 @@
 - Collaborative Filtering for Implicit Feedback Data, 2008 [`review`](./paper_review/Collaborative%20Filtering%20for%20Implicit%20Feedback%20Data.md)
 - BPR: Bayesian Personalized Ranking from Implicit Feedback, UAI 2009 [`review`](./paper_review/BPR%3A%20Bayesian%20Personalized%20Ranking%20from%20Implicit%20Feedback.md)
 - Context-Aware Recommender Systems, 2011
-- Neural Collborative Filtering, 2017 IWWWC [`review`](./paper_review/Neural%20Collaborative%20Filtering.md)
+- Neural Collaborative Filtering, 2017 IWWWC [`review`](./paper_review/Neural%20Collaborative%20Filtering.md)
 - Fatorization Machines, 2009 [`review`](./paper_review/Factorization%20Machines.md)
 - Wide & Deep Learning for Recommender Systems, 2016 [`review`](./paper_review/Wide%20%26%20Deep%20Learning%20for%20Recommender%20Systems.md)
 - DeepFM: A Factorization-Machine based Neural Network for CTR Prediction, 2017 [`review`](./paper_review/DeepFM%3A%20A%20Factorization-Machine%20based%20Neural%20Network%20for%20CTR%20Prediction.md)

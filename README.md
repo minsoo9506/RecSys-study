@@ -74,6 +74,10 @@
 
 - Algorithmic Effects on the Diversity of Consumption on Spotify, WWW 2020
 
+### Bias
+
+- Lessons Learned Addressing Dataset Bias in Model-Based Candidate Generation at Twitter, 2020 KDD IRS [`review`](./paper_review/Lessons%20Learned%20Addressing%20Dataset%20Bias%20in%20Model-Based%20Candidate%20Generation%20at%20Twitter.md)
+
 ### Survey
 
 - Deep Learning based Recommender System: A Survey and New Perspectives, 2019

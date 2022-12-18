@@ -46,6 +46,7 @@
 # Appiled Project
 
 - [LG Uplus 추천 대회 참여 repo](https://github.com/minsoo9506/lg-uplus-RecSys-competition)
+- [Kaggle OTTO 따라잡기](./kaggle_OTTO/)
 
 # Paper Read
 

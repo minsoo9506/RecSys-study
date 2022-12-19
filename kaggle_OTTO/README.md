@@ -18,6 +18,12 @@
   - 기본적인 EDA와 데이터의 형태 파악
   - freqency를 이용한 rule-based model 모델링
 
+# Score
+
+| model            | public score | 설명    |
+| ---------------- | ------------ | ------- |
+| rule-based model | 0.482        | 테스트3 |
+
 # Reference
 
 - [Transformers4Rec: A flexible library for Sequential and Session-based recommendation](https://medium.com/nvidia-merlin/transformers4rec-4523cc7d8fa8)

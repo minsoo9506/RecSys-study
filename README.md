@@ -82,6 +82,11 @@
 
 - Lessons Learned Addressing Dataset Bias in Model-Based Candidate Generation at Twitter, 2020 KDD IRS [`review`](./paper_review/Lessons%20Learned%20Addressing%20Dataset%20Bias%20in%20Model-Based%20Candidate%20Generation%20at%20Twitter.md)
 
+### User Modeling
+- Exploring the longitudinal effects of nudging on users’ music
+genre exploration behavior and listening preferences, 2022 [`paper`](https://dl.acm.org/doi/pdf/10.1145/3523227.3546772)
+- Personalizing Benefits Allocation Without Spending Money: Utilizing Uplift Modeling in a Budget Constrained Setup, Recsys2022 [`video`](https://dl.acm.org/doi/10.1145/3523227.3547381)
+
 ### Survey
 
 - Deep Learning based Recommender System: A Survey and New Perspectives, 2019
@@ -108,7 +113,7 @@
 - (Deview2020) 유저가 좋은 작품(웹툰)을 만났을 때
 - (Deview2020) 추천시스템 3.0: 딥러닝 후기시대에서 바이어스, 그래프, 그리고 인과관계의 중요성
 - NDC21-데이터분석, 추천알고리즘 offline A/B 테스트 (feat: PAIGE 프로야구 서비스)
-- 데이터야놀자2022, 뭐먹지 빌런을 무찌르는 GNN 기반 개인화 추천 - 윤기태님 [`review`](./review/%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%95%BC%EB%86%80%EC%9E%902022%2C%20%EB%AD%90%EB%A8%B9%EC%A7%80%20%EB%B9%8C%EB%9F%B0%EC%9D%84%20%EB%AC%B4%EC%B0%8C%EB%A5%B4%EB%8A%94%20GNN%20%EA%B8%B0%EB%B0%98%20%EA%B0%9C%EC%9D%B8%ED%99%94%20%EC%B6%94%EC%B2%9C%20-%20%EC%9C%A4%EA%B8%B0%ED%83%9C%EB%8B%98.md)
+- 데이터야놀자2022, 뭐먹지 빌런을 무찌르는 GNN 기반 개인화 추천 - 윤기태님 [`review`](./review/%EB%AD%90%EB%A8%B9%EC%A7%80%20%EB%B9%8C%EB%9F%B0%EC%9D%84%20%EB%AC%B4%EC%B0%8C%EB%A5%B4%EB%8A%94%20GNN%20%EA%B8%B0%EB%B0%98%20%EA%B0%9C%EC%9D%B8%ED%99%94%20%EC%B6%94%EC%B2%9C.md)
 - if(kakao)dev2022 Sequential Recommendation System 카카오 서비스 적용기
 - if(kakao)dev2022 Explainable Recommender System in 카카오웹툰
 

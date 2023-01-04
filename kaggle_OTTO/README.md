@@ -51,10 +51,10 @@ logger.info(model)
 | model            | public score (weighted recall@) |
 | ---------------- | ------------------------------- |
 | rule-based model | 0.482                           |
-| GRU4REC          | 0                               |
-| XGBoost ranker   | 0                               |
+| GRU4REC          | 0.544                           |
+| XGBoost ranker   | 0.482                           |
 
-# Other Reference
+# Other References
 
 - [(Article) Transformers4Rec: A flexible library for Sequential and Session-based recommendation](https://medium.com/nvidia-merlin/transformers4rec-4523cc7d8fa8)
 - [해당 데이터 EDA를 잘한 노트북](https://www.kaggle.com/code/andradaolteanu/otto-i-was-warned-this-one-is-complicated)

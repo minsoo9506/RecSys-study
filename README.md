@@ -1,8 +1,8 @@
 - 추천시스템 공부
   - Date: 2022.09 ~
-  - 기본개념, 모델구현, 논문리딩, 프로젝트
+  - 기본개념, 모델구현 및 대회참여, 논문리딩, 프로젝트
 
-# Study Materials
+# Study
 
 <details>
 <summary>패스트캠퍼스 딥러닝을 활용한 추천시스템 구현 올인원 패키지 Online</summary>
@@ -30,11 +30,11 @@
 </div>
 </details>
 
-# Code
+# Practice
 
-- numpy, pytorch, pytorch lightning
-
-### Algorithm
+- LG Uplus 추천 대회 참여 [`repository`](https://github.com/minsoo9506/lg-uplus-RecSys-competition)
+- Kaggle OTTO 따라잡기 [`folder`](./kaggle_OTTO/)
+- Algorithm Implementation
 
 |             Model              |                                      Model Code                                      |                           Example Code                           |
 | :----------------------------: | :----------------------------------------------------------------------------------: | :--------------------------------------------------------------: |
@@ -43,10 +43,7 @@
 |     Factorization Machine      |                             [`model`](./src/model/FM.py)                             |  [`KMRD-small example`](./notebook/example_FM_KMRD_small.ipynb)  |
 |             DeepFM             | [`model`](./src/model/DeepFM.py), [`lit_model`](./src/lit_model/DeepFM_lit_model.py) |           [`KMRD-small example`](./src/run_DeepFM.py)            |
 
-# Appiled Project
-
-- [LG Uplus 추천 대회 참여 repo](https://github.com/minsoo9506/lg-uplus-RecSys-competition)
-- [Kaggle OTTO 따라잡기](./kaggle_OTTO/)
+# Project
 
 # Paper Read
 
@@ -72,7 +69,8 @@
 ### Algorithm - Session-based, Sequential
 
 - Session-based Recommendations with Recurrent Neural Networks, 2015 ICLR
-- BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations from Transformer, 2019
+- BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations from Transformer, 2019 [`paper`](https://arxiv.org/abs/1904.06690)
+- SASRec: Self-Attentive Sequential Recommendation, 2018 [`paper`](https://arxiv.org/abs/1808.09781)
 
 ### Diversity
 
@@ -91,7 +89,7 @@ genre exploration behavior and listening preferences, 2022 [`paper`](https://dl.
 
 - Deep Learning based Recommender System: A Survey and New Perspectives, 2019
 
-# Other Sources
+# Other Resources
 
 ### Use Case
 

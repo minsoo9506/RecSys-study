@@ -47,7 +47,7 @@
 
 # Paper Read
 
-### Algorithm
+### Algorithm - collaborative filtering
 
 - Collaborative Filtering for Implicit Feedback Data, 2008 [`review`](./paper_review/Collaborative%20Filtering%20for%20Implicit%20Feedback%20Data.md)
 - BPR: Bayesian Personalized Ranking from Implicit Feedback, UAI 2009 [`review`](./paper_review/BPR%3A%20Bayesian%20Personalized%20Ranking%20from%20Implicit%20Feedback.md)
@@ -59,10 +59,12 @@
 - AutoRec: Autoencoders Meet Collaborative Filtering, 2015 WWW
 - Training Deep AutoEncoders for Collaborative Filtering, 2017 [`review`](./paper_review/Training%20Deep%20AutoEncoders%20for%20Collaborative%20Filtering.md)
 - Variational Autoencoders for Collaborative Filtering, 2018
+- Deep content-based music recommendation, 2013 NIPS
+
+### Algorithm - text, image
 - Joint Training of Ratings and Reviews with Recurrent Recommender Nerworks, 2017 ICLR [`review`](./paper_review/Joint%20Training%20of%20Ratings%20and%20Reviews%20with%20Recurrent%20Recommender%20Nerworks.md)
 - Image-based Recommendations on Styles and Substitutes, 2015 SIGIR
 - VBPR: Visual Bayesian Personalized Ranking from Implicit Feedback, 2016 AAAI
-- Deep content-based music recommendation, 2013 NIPS
 - Deep Neural Networks for YouTube Recommendations, 2016 RecSys
 - Recommending What Video to Watch Next: A Multitask Ranking System, 2019 RecSys
 
@@ -79,6 +81,7 @@
 ### Bias
 
 - Lessons Learned Addressing Dataset Bias in Model-Based Candidate Generation at Twitter, 2020 KDD IRS [`review`](./paper_review/Lessons%20Learned%20Addressing%20Dataset%20Bias%20in%20Model-Based%20Candidate%20Generation%20at%20Twitter.md)
+- Popularity-Opportunity Bias in Collaborative Filtering, WSDM 2021 [`paper`](https://dl.acm.org/doi/pdf/10.1145/3437963.3441820) [`review`](./review/Popularity-Opportunity%20Bias%20in%20Collaborative%20Filtering.md)
 
 ### User Modeling
 - Exploring the longitudinal effects of nudging on users’ music

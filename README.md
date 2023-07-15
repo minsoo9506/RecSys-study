@@ -1,6 +1,23 @@
 - 추천시스템 공부
-  - Date: 2022.09 ~
   - 기본개념, 모델구현 및 대회참여, 논문리딩, 프로젝트
+
+<h3>:open_book: Index</h3>
+<!-- TOC -->
+
+- [Study](#study)
+- [Practice](#practice)
+- [Project](#project)
+- [Paper Read](#paper-read)
+    - [Algorithm - collaborative filtering](#algorithm---collaborative-filtering)
+    - [Algorithm - text, image](#algorithm---text-image)
+    - [Algorithm - Session-based, Sequential](#algorithm---session-based-sequential)
+    - [Diversity](#diversity)
+    - [Bias](#bias)
+    - [User Modeling](#user-modeling)
+    - [Survey](#survey)
+- [Other Resources](#other-resources)
+
+<!-- /TOC -->
 
 # Study
 
@@ -13,37 +30,36 @@
   - KMRD(small)
   - Netflix
 - 이론 (summary)
-  - [content-based filtering](./fastcampus_lecture/summary/contents_based_filtering.md)
-  - [neighborhood-based collaborative filtering](./fastcampus_lecture/summary/neighborhood_based_collaborative_filtering.md)
-  - [model-based filtering](./fastcampus_lecture/summary/model_based_filtering.md)
-  - [hybrid recommender system](./fastcampus_lecture/summary/hybrid_recommender_system.md)
-  - [contextual aware recommender system](./fastcampus_lecture/summary/contextual_aware_recommender_system.md)
-  - [evaluation metric](./fastcampus_lecture/summary/evaluation_metric.md)
+  - [content-based filtering](./fastcampus_lecture_1/summary/contents_based_filtering.md)
+  - [neighborhood-based collaborative filtering](./fastcampus_lecture_1/summary/neighborhood_based_collaborative_filtering.md)
+  - [model-based filtering](./fastcampus_lecture_1/summary/model_based_filtering.md)
+  - [hybrid recommender system](./fastcampus_lecture_1/summary/hybrid_recommender_system.md)
+  - [contextual aware recommender system](./fastcampus_lecture_1/summary/contextual_aware_recommender_system.md)
+  - [evaluation metric](./fastcampus_lecture_1/summary/evaluation_metric.md)
 - 실습 (code)
-  - [movielens EDA](./fastcampus_lecture/notebook/00_movielens_eda.ipynb)
-  - [movielens simple model](./fastcampus_lecture/notebook/01_movielens_simple_model.ipynb)
-  - [movielens content-based filtering: TFIDF](./fastcampus_lecture/notebook/02_movielens_contents_based_filtering_TFIDF.ipynb)
-  - [movielens neighborhood-based collaborative filtering](./fastcampus_lecture/notebook/03_movielens_neighborhood_based_collaborative_filtering.ipynb)
-  - [movielens matrix factorization: svd](./fastcampus_lecture/notebook/04_movielens_matrix_factorization_svd.ipynb)
-  - [KMRD, Netflix EDA](./fastcampus_lecture/notebook/05_KMRD_netflix_eda.ipynb)
+  - [movielens EDA](./fastcampus_lecture_1/notebook/00_movielens_eda.ipynb)
+  - [movielens simple model](./fastcampus_lecture_1/notebook/01_movielens_simple_model.ipynb)
+  - [movielens content-based filtering: TFIDF](./fastcampus_lecture_1/notebook/02_movielens_contents_based_filtering_TFIDF.ipynb)
+  - [movielens neighborhood-based collaborative filtering](./fastcampus_lecture_1/notebook/03_movielens_neighborhood_based_collaborative_filtering.ipynb)
+  - [movielens matrix factorization: svd](./fastcampus_lecture_1/notebook/04_movielens_matrix_factorization_svd.ipynb)
+  - [KMRD, Netflix EDA](./fastcampus_lecture_1/notebook/05_KMRD_netflix_eda.ipynb)
 
 </div>
+</details>
+
+<details>
+<summary>30개 프로젝트로 끝내는 추천시스템 구현 초격차 패키지</summary>
+
+
 </details>
 
 # Practice
 
 - LG Uplus 추천 대회 참여 [`repository`](https://github.com/minsoo9506/lg-uplus-RecSys-competition)
 - Kaggle OTTO 따라잡기 [`folder`](./kaggle_OTTO/)
-- Algorithm Implementation
-
-|             Model              |                                      Model Code                                      |                           Example Code                           |
-| :----------------------------: | :----------------------------------------------------------------------------------: | :--------------------------------------------------------------: |
-| Matrix Factorization with SGD  |                             [`model`](./src/model/MF.py)                             | [`movielens example`](./notebook/example_MF_SGD_movielens.ipynb) |
-| Neural Collaborative Filtering |    [`model`](./src/model/NCF.py), [`lit_model`](./src/lit_model/NCF_lit_model.py)    |             [`KMRD-small example`](./src/run_NCF.py)             |
-|     Factorization Machine      |                             [`model`](./src/model/FM.py)                             |  [`KMRD-small example`](./notebook/example_FM_KMRD_small.ipynb)  |
-|             DeepFM             | [`model`](./src/model/DeepFM.py), [`lit_model`](./src/lit_model/DeepFM_lit_model.py) |           [`KMRD-small example`](./src/run_DeepFM.py)            |
 
 # Project
+- 모델 구현 [`repository`](https://github.com/minsoo9506/RecModel)
 
 # Paper Read
 
@@ -94,8 +110,6 @@ genre exploration behavior and listening preferences, 2022 [`paper`](https://dl.
 
 # Other Resources
 
-### Use Case
-
 - 카카오 AI 추천: 카카오페이지와 멜론으로 살펴보는 카카오 연관 추천
 - 카카오 AI 추천: 토픽모델링과 MAB를 이용한 카카오 개인화 추천
 - 카카오 AI 추천: 협업필터링 모델 선택 시의 기준에 대하여
@@ -117,7 +131,4 @@ genre exploration behavior and listening preferences, 2022 [`paper`](https://dl.
 - 데이터야놀자2022, 뭐먹지 빌런을 무찌르는 GNN 기반 개인화 추천 - 윤기태님 [`review`](./review/%EB%AD%90%EB%A8%B9%EC%A7%80%20%EB%B9%8C%EB%9F%B0%EC%9D%84%20%EB%AC%B4%EC%B0%8C%EB%A5%B4%EB%8A%94%20GNN%20%EA%B8%B0%EB%B0%98%20%EA%B0%9C%EC%9D%B8%ED%99%94%20%EC%B6%94%EC%B2%9C.md)
 - if(kakao)dev2022 Sequential Recommendation System 카카오 서비스 적용기
 - if(kakao)dev2022 Explainable Recommender System in 카카오웹툰
-
-### Article
-
 - Transformers4Rec: A flexible library for Sequential and Session-based recommendation

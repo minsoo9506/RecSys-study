@@ -132,3 +132,5 @@ genre exploration behavior and listening preferences, 2022 [`paper`](https://dl.
 - if(kakao)dev2022 Sequential Recommendation System 카카오 서비스 적용기
 - if(kakao)dev2022 Explainable Recommender System in 카카오웹툰
 - Transformers4Rec: A flexible library for Sequential and Session-based recommendation
+- [[22'Recsys] BERT4Rec 구현의 진실에 관하여 : A Systematic Review and Replicability Study of BERT4Rec for Sequential Recommendation](https://mytype9591.tistory.com/m/6)
+- [Modeling Users According to Their Slow and Fast-Moving Interests](https://research.atspotify.com/2022/02/modeling-users-according-to-their-slow-and-fast-moving-interests/)

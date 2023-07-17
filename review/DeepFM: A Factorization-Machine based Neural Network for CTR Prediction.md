@@ -5,7 +5,7 @@
 
 # 모델
 
-[논문 Figure1](https://fastcampus.co.kr/courses/203078/clips/)을 통해서 어렵지 않게 모델의 형태를 이해할 수 있다.
+[논문 Figure1](https://arxiv.org/pdf/1703.04247.pdf)을 통해서 어렵지 않게 모델의 형태를 이해할 수 있다.
 
 먼저, input data의 형태부터 알아보자.
 

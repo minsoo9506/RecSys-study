@@ -95,6 +95,8 @@
 - PageRank: Standing on the shoulders of giant, 2010 [`paper`](https://arxiv.org/pdf/1002.2858.pdf)
 - DeepWalk: Online Learning of Social Representations, 2014 [`paper`](https://arxiv.org/pdf/1403.6652.pdf)
 - SEMI-SUPERVISED CLASSIFICATION WITH GRAPH CONVOLUTIONAL NETWORKS, 2017 [`paper`](https://arxiv.org/pdf/1609.02907.pdf)
+- Inductive Representation Learning on Large Graphs, 2017 [`paper`](https://arxiv.org/pdf/1706.02216.pdf)
+- Graph Attention Networks, 2018 [`paper`](https://arxiv.org/pdf/1710.10903.pdf)
 
 ### Diversity
 

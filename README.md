@@ -97,6 +97,7 @@
 - SEMI-SUPERVISED CLASSIFICATION WITH GRAPH CONVOLUTIONAL NETWORKS, 2017 [`paper`](https://arxiv.org/pdf/1609.02907.pdf)
 - Inductive Representation Learning on Large Graphs, 2017 [`paper`](https://arxiv.org/pdf/1706.02216.pdf)
 - Graph Attention Networks, 2018 [`paper`](https://arxiv.org/pdf/1710.10903.pdf)
+- Graph Convolutional Neural Networks for Web-Scale Recommender Systems [`paper`](https://arxiv.org/pdf/1806.01973.pdf)
 
 ### Diversity
 

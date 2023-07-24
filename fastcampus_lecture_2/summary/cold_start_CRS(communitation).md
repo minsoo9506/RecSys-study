@@ -1,0 +1,6 @@
+  - 사용자와 대화 형식으로 상호작용하여 사용자의 선호를 파악하고 추천을 제공하는 시스템
+  - Is ChatGPT a Good Recommender? A Preliminary Study 를 통해서 살펴볼 수 있다.
+    - (few shot) rating prediction은 꽤 잘함
+    - sequential recommend는 잘 못함 (prompt의 길이 제한도 있음)
+    - 직접 추천도 기존 방법에 비해 잘 못함 (prompt에 따라서 변화도 큼)
+    - 자연어 기반 metric의 경우 기존 모델에 비해 낮은 성능을 보이지만 정성적으로 평가하면 좋은 결과가 보인다. (리뷰 요약 등의 테스크)

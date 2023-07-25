@@ -8,9 +8,9 @@
 - [Practice](#practice)
 - [Project](#project)
 - [Paper Read](#paper-read)
-    - [Algorithm - collaborative filtering](#algorithm---collaborative-filtering)
+    - [Algorithm](#algorithm)
     - [Algorithm - text, image](#algorithm---text-image)
-    - [Algorithm - Session-based, Sequential](#algorithm---session-based-sequential)
+    - [Algorithm - session-based, sequential](#algorithm---session-based-sequential)
     - [Algorithm - graph](#algorithm---graph)
     - [Diversity](#diversity)
     - [Bias](#bias)
@@ -64,7 +64,7 @@
 
 # Paper Read
 
-### Algorithm - collaborative filtering
+### Algorithm
 
 - Collaborative Filtering for Implicit Feedback Data, 2008 [`review`](./paper_review/Collaborative%20Filtering%20for%20Implicit%20Feedback%20Data.md)
 - BPR: Bayesian Personalized Ranking from Implicit Feedback, UAI 2009 [`review`](./paper_review/BPR%3A%20Bayesian%20Personalized%20Ranking%20from%20Implicit%20Feedback.md)
@@ -82,10 +82,10 @@
 - Joint Training of Ratings and Reviews with Recurrent Recommender Nerworks, 2017 ICLR [`review`](./paper_review/Joint%20Training%20of%20Ratings%20and%20Reviews%20with%20Recurrent%20Recommender%20Nerworks.md)
 - Image-based Recommendations on Styles and Substitutes, 2015 SIGIR
 - VBPR: Visual Bayesian Personalized Ranking from Implicit Feedback, 2016 AAAI
-- Deep Neural Networks for YouTube Recommendations, 2016 RecSys
+- Deep Neural Networks for YouTube Recommendations, 2016 RecSys [`paper`](https://static.googleusercontent.com/media/research.google.com/ko//pubs/archive/45530.pdf)
 - Recommending What Video to Watch Next: A Multitask Ranking System, 2019 RecSys
 
-### Algorithm - Session-based, Sequential
+### Algorithm - session-based, sequential
 
 - Session-based Recommendations with Recurrent Neural Networks, 2015 ICLR
 - BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations from Transformer, 2019 [`paper`](https://arxiv.org/abs/1904.06690)
@@ -143,3 +143,4 @@ genre exploration behavior and listening preferences, 2022 [`paper`](https://dl.
 - Transformers4Rec: A flexible library for Sequential and Session-based recommendation
 - [[22'Recsys] BERT4Rec 구현의 진실에 관하여 : A Systematic Review and Replicability Study of BERT4Rec for Sequential Recommendation](https://mytype9591.tistory.com/m/6)
 - [Modeling Users According to Their Slow and Fast-Moving Interests](https://research.atspotify.com/2022/02/modeling-users-according-to-their-slow-and-fast-moving-interests/)
+- [Recommender Systems, Not Just Recommender Models, nividia merlin](https://medium.com/nvidia-merlin/recommender-systems-not-just-recommender-models-485c161c755e)

@@ -1,0 +1,3 @@
+- https://openbenchmark.github.io/BARS/
+- 재현가능한 연구, 표준화된 벤치마킹
+- 나중에 모델링 연습하면서 dataset 사용하면 될듯

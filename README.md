@@ -15,6 +15,7 @@
     - [Diversity](#diversity)
     - [Bias](#bias)
     - [User Modeling](#user-modeling)
+    - [Causality](#causality)
     - [Survey](#survey)
 - [Other Resources](#other-resources)
 
@@ -77,6 +78,7 @@
 - Training Deep AutoEncoders for Collaborative Filtering, 2017 [`review`](./paper_review/Training%20Deep%20AutoEncoders%20for%20Collaborative%20Filtering.md)
 - Variational Autoencoders for Collaborative Filtering, 2018
 - Deep content-based music recommendation, 2013 NIPS
+- Deep Learning Recommendation Model for Personalization and Recommendation Systems (DLRM), 2019 [`paper`](https://arxiv.org/pdf/1906.00091.pdf)
 
 ### Algorithm - text, image
 - Joint Training of Ratings and Reviews with Recurrent Recommender Nerworks, 2017 ICLR [`review`](./paper_review/Joint%20Training%20of%20Ratings%20and%20Reviews%20with%20Recurrent%20Recommender%20Nerworks.md)
@@ -100,11 +102,9 @@
 - Graph Convolutional Neural Networks for Web-Scale Recommender Systems [`paper`](https://arxiv.org/pdf/1806.01973.pdf)
 
 ### Diversity
-
 - Algorithmic Effects on the Diversity of Consumption on Spotify, WWW 2020
 
 ### Bias
-
 - Lessons Learned Addressing Dataset Bias in Model-Based Candidate Generation at Twitter, 2020 KDD IRS [`review`](./paper_review/Lessons%20Learned%20Addressing%20Dataset%20Bias%20in%20Model-Based%20Candidate%20Generation%20at%20Twitter.md)
 - Popularity-Opportunity Bias in Collaborative Filtering, WSDM 2021 [`paper`](https://dl.acm.org/doi/pdf/10.1145/3437963.3441820) [`review`](./review/Popularity-Opportunity%20Bias%20in%20Collaborative%20Filtering.md)
 
@@ -113,12 +113,13 @@
 genre exploration behavior and listening preferences, 2022 [`paper`](https://dl.acm.org/doi/pdf/10.1145/3523227.3546772)
 - Personalizing Benefits Allocation Without Spending Money: Utilizing Uplift Modeling in a Budget Constrained Setup, Recsys2022 [`video`](https://dl.acm.org/doi/10.1145/3523227.3547381)
 
-### Survey
+### Causality
+- Inferring the Causal Impact of New Track Releases on Music Recommendation Platforms through Counterfactual Predictions, RecSys2020 [`papers`](https://labtomarket.files.wordpress.com/2020/08/recsys2020lbr.pdf?utm_source=LinkedIn&utm_medium=post&utm_campaign=monday_posting&utm_term=2023_07_24)
 
+### Survey
 - Deep Learning based Recommender System: A Survey and New Perspectives, 2019
 
 # Other Resources
-
 - 카카오 AI 추천: 카카오페이지와 멜론으로 살펴보는 카카오 연관 추천
 - 카카오 AI 추천: 토픽모델링과 MAB를 이용한 카카오 개인화 추천
 - 카카오 AI 추천: 협업필터링 모델 선택 시의 기준에 대하여
@@ -144,3 +145,6 @@ genre exploration behavior and listening preferences, 2022 [`paper`](https://dl.
 - [[22'Recsys] BERT4Rec 구현의 진실에 관하여 : A Systematic Review and Replicability Study of BERT4Rec for Sequential Recommendation](https://mytype9591.tistory.com/m/6)
 - [Modeling Users According to Their Slow and Fast-Moving Interests](https://research.atspotify.com/2022/02/modeling-users-according-to-their-slow-and-fast-moving-interests/)
 - [Recommender Systems, Not Just Recommender Models, nividia merlin](https://medium.com/nvidia-merlin/recommender-systems-not-just-recommender-models-485c161c755e)
+- [무신사가 카테고리숍 추천을 하는 방법](https://medium.com/musinsa-tech/%EB%AC%B4%EC%8B%A0%EC%82%AC%EA%B0%80-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC%EC%88%8D-%EC%B6%94%EC%B2%9C%EC%9D%84-%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-a45b219685ea)
+- [Scaling deep retrieval with TensorFlow Recommenders and Vertex AI Matching Engine](https://cloud.google.com/blog/products/ai-machine-learning/scaling-deep-retrieval-tensorflow-two-towers-architecture?hl=en)
+- [DLRM github](https://github.com/facebookresearch/dlrm)

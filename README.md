@@ -79,6 +79,7 @@
 - Variational Autoencoders for Collaborative Filtering, 2018
 - Deep content-based music recommendation, 2013 NIPS
 - Deep Learning Recommendation Model for Personalization and Recommendation Systems (DLRM), 2019 [`paper`](https://arxiv.org/pdf/1906.00091.pdf)
+- DCN V2: Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems 2020 [`paper`](https://arxiv.org/pdf/2008.13535.pdf)
 
 ### Algorithm - text, image
 - Joint Training of Ratings and Reviews with Recurrent Recommender Nerworks, 2017 ICLR [`review`](./paper_review/Joint%20Training%20of%20Ratings%20and%20Reviews%20with%20Recurrent%20Recommender%20Nerworks.md)
@@ -148,3 +149,4 @@ genre exploration behavior and listening preferences, 2022 [`paper`](https://dl.
 - [무신사가 카테고리숍 추천을 하는 방법](https://medium.com/musinsa-tech/%EB%AC%B4%EC%8B%A0%EC%82%AC%EA%B0%80-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC%EC%88%8D-%EC%B6%94%EC%B2%9C%EC%9D%84-%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-a45b219685ea)
 - [Scaling deep retrieval with TensorFlow Recommenders and Vertex AI Matching Engine](https://cloud.google.com/blog/products/ai-machine-learning/scaling-deep-retrieval-tensorflow-two-towers-architecture?hl=en)
 - [DLRM github](https://github.com/facebookresearch/dlrm)
+- [검색어 분석을 통한 상품 정렬 개선, 무신사 2021](https://medium.com/musinsa-tech/%EA%B2%80%EC%83%89%EC%96%B4-%EB%B6%84%EC%84%9D%EC%9D%84-%ED%86%B5%ED%95%9C-%EC%83%81%ED%92%88-%EC%A0%95%EB%A0%AC-%EA%B0%9C%EC%84%A0-b92ded2923c3)

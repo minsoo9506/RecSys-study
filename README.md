@@ -18,6 +18,8 @@
     - [Causality](#causality)
     - [Survey](#survey)
 - [Other Resources](#other-resources)
+    - [Industry](#industry)
+    - [others](#others)
 
 <!-- /TOC -->
 
@@ -121,6 +123,7 @@ genre exploration behavior and listening preferences, 2022 [`paper`](https://dl.
 - Deep Learning based Recommender System: A Survey and New Perspectives, 2019
 
 # Other Resources
+### Industry
 - 카카오 AI 추천: 카카오페이지와 멜론으로 살펴보는 카카오 연관 추천
 - 카카오 AI 추천: 토픽모델링과 MAB를 이용한 카카오 개인화 추천
 - 카카오 AI 추천: 협업필터링 모델 선택 시의 기준에 대하여
@@ -142,11 +145,16 @@ genre exploration behavior and listening preferences, 2022 [`paper`](https://dl.
 - 데이터야놀자2022, 뭐먹지 빌런을 무찌르는 GNN 기반 개인화 추천 - 윤기태님 [`review`](./review/%EB%AD%90%EB%A8%B9%EC%A7%80%20%EB%B9%8C%EB%9F%B0%EC%9D%84%20%EB%AC%B4%EC%B0%8C%EB%A5%B4%EB%8A%94%20GNN%20%EA%B8%B0%EB%B0%98%20%EA%B0%9C%EC%9D%B8%ED%99%94%20%EC%B6%94%EC%B2%9C.md)
 - if(kakao)dev2022 Sequential Recommendation System 카카오 서비스 적용기
 - if(kakao)dev2022 Explainable Recommender System in 카카오웹툰
+- [무신사가 카테고리숍 추천을 하는 방법](https://medium.com/musinsa-tech/%EB%AC%B4%EC%8B%A0%EC%82%AC%EA%B0%80-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC%EC%88%8D-%EC%B6%94%EC%B2%9C%EC%9D%84-%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-a45b219685ea)
+- [검색어 분석을 통한 상품 정렬 개선, 무신사 2021](https://medium.com/musinsa-tech/%EA%B2%80%EC%83%89%EC%96%B4-%EB%B6%84%EC%84%9D%EC%9D%84-%ED%86%B5%ED%95%9C-%EC%83%81%ED%92%88-%EC%A0%95%EB%A0%AC-%EA%B0%9C%EC%84%A0-b92ded2923c3)
+- [Introducing Natural Language Search for Podcast Episodes, spotify 2022](https://engineering.atspotify.com/2022/03/introducing-natural-language-search-for-podcast-episodes/)
+- [Modeling Users According to Their Slow and Fast-Moving Interests, spotify 2022](https://research.atspotify.com/2022/02/modeling-users-according-to-their-slow-and-fast-moving-interests/)
+- [Building a Deep Learning Based Retrieval System for Personalized Recommendations,ebay 2022](https://tech.ebayinc.com/engineering/building-a-deep-learning-based-retrieval-system-for-personalized-recommendations/)
+
+### others
 - Transformers4Rec: A flexible library for Sequential and Session-based recommendation
 - [[22'Recsys] BERT4Rec 구현의 진실에 관하여 : A Systematic Review and Replicability Study of BERT4Rec for Sequential Recommendation](https://mytype9591.tistory.com/m/6)
-- [Modeling Users According to Their Slow and Fast-Moving Interests](https://research.atspotify.com/2022/02/modeling-users-according-to-their-slow-and-fast-moving-interests/)
 - [Recommender Systems, Not Just Recommender Models, nividia merlin](https://medium.com/nvidia-merlin/recommender-systems-not-just-recommender-models-485c161c755e)
-- [무신사가 카테고리숍 추천을 하는 방법](https://medium.com/musinsa-tech/%EB%AC%B4%EC%8B%A0%EC%82%AC%EA%B0%80-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC%EC%88%8D-%EC%B6%94%EC%B2%9C%EC%9D%84-%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-a45b219685ea)
 - [Scaling deep retrieval with TensorFlow Recommenders and Vertex AI Matching Engine](https://cloud.google.com/blog/products/ai-machine-learning/scaling-deep-retrieval-tensorflow-two-towers-architecture?hl=en)
 - [DLRM github](https://github.com/facebookresearch/dlrm)
-- [검색어 분석을 통한 상품 정렬 개선, 무신사 2021](https://medium.com/musinsa-tech/%EA%B2%80%EC%83%89%EC%96%B4-%EB%B6%84%EC%84%9D%EC%9D%84-%ED%86%B5%ED%95%9C-%EC%83%81%ED%92%88-%EC%A0%95%EB%A0%AC-%EA%B0%9C%EC%84%A0-b92ded2923c3)
+- [DeepCTR github](https://github.com/shenweichen/DeepCTR)

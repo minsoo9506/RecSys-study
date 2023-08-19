@@ -26,8 +26,7 @@
 # Study
 
 <details>
-<summary>패스트캠퍼스 딥러닝을 활용한 추천시스템 구현 올인원 패키지 Online</summary>
-<div markdown="1">
+<summary>패스트캠퍼스 강의1</summary>
 
 - data
   - MovieLens(small)
@@ -48,12 +47,21 @@
   - [movielens matrix factorization: svd](./fastcampus_lecture_1/notebook/04_movielens_matrix_factorization_svd.ipynb)
   - [KMRD, Netflix EDA](./fastcampus_lecture_1/notebook/05_KMRD_netflix_eda.ipynb)
 
-</div>
 </details>
 
 <details>
-<summary>30개 프로젝트로 끝내는 추천시스템 구현 초격차 패키지</summary>
+<summary>패스트캠퍼스 강의2</summary>
 
+- 이론 (summary)
+  - [use case](./fastcampus_lecture_2/summary/use_case/)
+    - eBay, Doordash, Spotify, Pinterest
+  - [cold start](./fastcampus_lecture_2/summary/cold_start/)
+  - [algorithm](./fastcampus_lecture_2/summary/algorithm/)
+  - [RecSys architecture](./fastcampus_lecture_2/summary/recsys_architecture/)
+  - [data and algorithm](./fastcampus_lecture_2/summary/data_and_algorithm/)
+    - 데이터 종류
+    - 비정형 데이터 분석 방법론
+    - 데이터별 알고리즘 적용 및 결과분석
 
 </details>
 

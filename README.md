@@ -60,8 +60,8 @@
   - [RecSys architecture](./fastcampus_lecture_2/summary/recsys_architecture/)
   - [data and algorithm](./fastcampus_lecture_2/summary/data_and_algorithm/)
     - 데이터 종류
-    - 비정형 데이터 분석 방법론
-    - 데이터별 알고리즘 적용 및 결과분석
+- 실습 (code)
+  - 도메인별 간단한 실습
 
 </details>
 
@@ -72,6 +72,7 @@
 
 # Project
 - 모델 구현 [`repository`](https://github.com/minsoo9506/RecModel)
+- 블로그 형식 정리 [`repository`](https://github.com/minsoo9506/RecSysBlog)
 
 # Paper Read
 

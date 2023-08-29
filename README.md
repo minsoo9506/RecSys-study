@@ -78,22 +78,22 @@
 
 ### Algorithm
 
-- Collaborative Filtering for Implicit Feedback Data, 2008 [`review`](./paper_review/Collaborative%20Filtering%20for%20Implicit%20Feedback%20Data.md)
-- BPR: Bayesian Personalized Ranking from Implicit Feedback, UAI 2009 [`review`](./paper_review/BPR%3A%20Bayesian%20Personalized%20Ranking%20from%20Implicit%20Feedback.md)
+- Collaborative Filtering for Implicit Feedback Data, 2008
+- BPR: Bayesian Personalized Ranking from Implicit Feedback, UAI 2009
 - Context-Aware Recommender Systems, 2011
-- Neural Collaborative Filtering, 2017 IWWWC [`review`](./paper_review/Neural%20Collaborative%20Filtering.md)
-- Fatorization Machines, 2009 [`review`](./paper_review/Factorization%20Machines.md)
-- Wide & Deep Learning for Recommender Systems, 2016 [`review`](./paper_review/Wide%20%26%20Deep%20Learning%20for%20Recommender%20Systems.md)
-- DeepFM: A Factorization-Machine based Neural Network for CTR Prediction, 2017 [`review`](./paper_review/DeepFM%3A%20A%20Factorization-Machine%20based%20Neural%20Network%20for%20CTR%20Prediction.md)
+- Neural Collaborative Filtering, 2017 IWWWC
+- Fatorization Machines, 2009
+- Wide & Deep Learning for Recommender Systems, 2016
+- DeepFM: A Factorization-Machine based Neural Network for CTR Prediction, 2017
 - AutoRec: Autoencoders Meet Collaborative Filtering, 2015 WWW
-- Training Deep AutoEncoders for Collaborative Filtering, 2017 [`review`](./paper_review/Training%20Deep%20AutoEncoders%20for%20Collaborative%20Filtering.md)
+- Training Deep AutoEncoders for Collaborative Filtering, 2017
 - Variational Autoencoders for Collaborative Filtering, 2018
 - Deep content-based music recommendation, 2013 NIPS
 - Deep Learning Recommendation Model for Personalization and Recommendation Systems (DLRM), 2019 [`paper`](https://arxiv.org/pdf/1906.00091.pdf)
 - DCN V2: Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems 2020 [`paper`](https://arxiv.org/pdf/2008.13535.pdf)
 
 ### Algorithm - text, image
-- Joint Training of Ratings and Reviews with Recurrent Recommender Nerworks, 2017 ICLR [`review`](./paper_review/Joint%20Training%20of%20Ratings%20and%20Reviews%20with%20Recurrent%20Recommender%20Nerworks.md)
+- Joint Training of Ratings and Reviews with Recurrent Recommender Nerworks, 2017 ICLR
 - Image-based Recommendations on Styles and Substitutes, 2015 SIGIR
 - VBPR: Visual Bayesian Personalized Ranking from Implicit Feedback, 2016 AAAI
 - Deep Neural Networks for YouTube Recommendations, 2016 RecSys [`paper`](https://static.googleusercontent.com/media/research.google.com/ko//pubs/archive/45530.pdf)
@@ -117,8 +117,8 @@
 - Algorithmic Effects on the Diversity of Consumption on Spotify, WWW 2020
 
 ### Bias
-- Lessons Learned Addressing Dataset Bias in Model-Based Candidate Generation at Twitter, 2020 KDD IRS [`review`](./paper_review/Lessons%20Learned%20Addressing%20Dataset%20Bias%20in%20Model-Based%20Candidate%20Generation%20at%20Twitter.md)
-- Popularity-Opportunity Bias in Collaborative Filtering, WSDM 2021 [`paper`](https://dl.acm.org/doi/pdf/10.1145/3437963.3441820) [`review`](./review/Popularity-Opportunity%20Bias%20in%20Collaborative%20Filtering.md)
+- Lessons Learned Addressing Dataset Bias in Model-Based Candidate Generation at Twitter, 2020 KDD IRS
+- Popularity-Opportunity Bias in Collaborative Filtering, WSDM 2021 [`paper`](https://dl.acm.org/doi/pdf/10.1145/3437963.3441820)
 
 ### User Modeling
 - Exploring the longitudinal effects of nudging on users’ music
@@ -151,7 +151,7 @@ genre exploration behavior and listening preferences, 2022 [`paper`](https://dl.
 - (Deview2020) 유저가 좋은 작품(웹툰)을 만났을 때
 - (Deview2020) 추천시스템 3.0: 딥러닝 후기시대에서 바이어스, 그래프, 그리고 인과관계의 중요성
 - NDC21-데이터분석, 추천알고리즘 offline A/B 테스트 (feat: PAIGE 프로야구 서비스)
-- 데이터야놀자2022, 뭐먹지 빌런을 무찌르는 GNN 기반 개인화 추천 - 윤기태님 [`review`](./review/%EB%AD%90%EB%A8%B9%EC%A7%80%20%EB%B9%8C%EB%9F%B0%EC%9D%84%20%EB%AC%B4%EC%B0%8C%EB%A5%B4%EB%8A%94%20GNN%20%EA%B8%B0%EB%B0%98%20%EA%B0%9C%EC%9D%B8%ED%99%94%20%EC%B6%94%EC%B2%9C.md)
+- 데이터야놀자2022, 뭐먹지 빌런을 무찌르는 GNN 기반 개인화 추천 - 윤기태님
 - if(kakao)dev2022 Sequential Recommendation System 카카오 서비스 적용기
 - if(kakao)dev2022 Explainable Recommender System in 카카오웹툰
 - [무신사가 카테고리숍 추천을 하는 방법](https://medium.com/musinsa-tech/%EB%AC%B4%EC%8B%A0%EC%82%AC%EA%B0%80-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC%EC%88%8D-%EC%B6%94%EC%B2%9C%EC%9D%84-%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-a45b219685ea)
